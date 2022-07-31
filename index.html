@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Permanent+Marker&family=Tiro+Kannada&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Large Explosion Idea - Rock Paper Scissors Lizard Spock</title>
+</head>
+
+<body>
+    <header>
+        <h2>Rock, Paper, Scissors, Lizard, Spock</h2>
+    </header>
+
+    <section class="game-area">
+        <p id="demo2">Make a Selection:</p>
+        <!-- This selection div contains the buttons   -->
+        <div class="selection">
+            <button class="fas fa-hand-rock choice btn--big" id="rock"></button>
+            <button class="fas fa-hand-paper choice btn--big" id="paper"></button>
+            <button class="fas fa-hand-scissors choice btn--big" id="scissors"></button>
+            <button class="fas fa-hand-lizard choice btn--big" id="lizard"></button>
+            <button class="fas fa-hand-spock choice btn--big" id="spock"></button>
+        </div>
+    </section>
+    <!--   The first section     -->
+    <section class="score-area">
+        <div class="moves">Number of moves remaining: 10 </div>
+        <div>Results - <p id="demo">-</p></div>
+        <div class="user col-third">
+                <h3 class="scores">You :<span id="playerScore">0</span></h3>
+                <img class="show" src="assets/images/rock.png" alt="rock hand">
+        </div>
+        <!--   Rules Section         -->
+        <div class="rules col-third">
+            <h3>Rules of the Game</h3>
+            <p>Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes
+                scissors,
+                scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it
+                always has, rock crushes scissors.</p>
+        </div>
+        <!--   The second section     -->
+        <div class="computer col-third">
+                <h3 class="scores">Computer :<span id="computerScore">0</span></h3>
+                <img class="show" src="assets/images/rock.png" alt="rock hand">
+        </div>
+    </section>
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/e83fc612cc.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

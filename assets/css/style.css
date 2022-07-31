@@ -1,0 +1,73 @@
+/* Global style */
+
+body {
+    background-color: #008AC4;
+    font-family: 'Permanent Marker', cursive;
+    color: antiquewhite;
+    text-align: center;
+    height: 100%;
+}
+
+/*  Heading */
+
+header {
+    height: 70px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+/*  Button area */
+
+.choice {
+    width: 15%;
+    height: 50px;
+}
+
+.btn--big {
+    padding-top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+    font-size: 3.2rem;
+    margin: 0 30px;
+}
+
+.btn--big:hover {
+    color: forestgreen;
+}
+
+/* Score area */
+
+.score-area {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.col-third {
+    width: 33%;
+    display: inline-block;
+}
+
+/* Selection images */
+
+.user {
+    float: left;
+}
+
+.computer {
+    float: right;
+}
+
+.scores {
+    margin-bottom: -2rem;
+    margin-top: 1rem;
+}
+
+.rules p {
+    font-size: 1rem;
+}
