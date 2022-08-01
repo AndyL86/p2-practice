@@ -1,66 +1,149 @@
-
 // Setting the scores and selecting our HTML elements.
-let computerScore = 1;
-let playerScore = 1;
-const pScore = document.getElementById('playerScore');
-const cScore = document.getElementById('computerScore');
+let compWins = 1;
+let userWIns = 1;
+const userScore = document.getElementById('userScore');
+const compScore = document.getElementById('compScore');
 const buttons = document.querySelectorAll('.selection button');
-const showIcon = document.querySelector('.show i');
-const computerShowIcon = document.querySelector('.computer i');
-// The randomClass array below this contains the rock,paper, and scissor Icon from font-awesome.
-const randomClasses = ["fas fa-hand-rock", "fas fa-hand-paper","fas fa-hand-scissors", "fas fa-hand-lizard", "fas fa-hand-spock"];
+const userImage = document.querySelector('.image i');
+const compImage = document.querySelector('.computer i');
+// The gameImages array below this contains the rock,paper, scissors, lizard and spock images.
+
+const gameImages = ["fas fa-hand-rock", "fas fa-hand-paper","fas fa-hand-scissors", "fas fa-hand-lizard", "fas fa-hand-spock"];
 const text = document.getElementById('demo');
 const text2 = document.getElementById('demo2');
 
 // Game Functionality: Setting forEach function for the buttons.
-const game = () =>{
-    buttons.forEach(btn =>{
-        btn.addEventListener('click',(e)=>{
-        // Random rock paper scissor for the computer and the player
-           let clickedBtn = e.target.className;
-           showIcon.className = clickedBtn;
-           let randomNum = Math.floor(Math.random() * randomClasses.length);
-           computerShowIcon.className = randomClasses[randomNum];
-           // Game Score.
-           // If it's a Tie .
-           if(showIcon.className === computerShowIcon.className){
-               pScore.innerHTML = pScore.innerHTML;
-               cScore.innerHTML = cScore.innerHTML;
-               text.innerHTML = "It's a Tie ! ";
-               text2.innerHTML = text.innerHTML;
-           } 
-          // if it's not a Tie.
-           else if(showIcon.className === randomClasses[0] && computerShowIcon.className === randomClasses[2]){
-               pScore.innerHTML = playerScore;
-               playerScore++;
-               text.innerHTML = "It's a Win ! ";
-               text2.innerHTML = text.innerHTML;
-           }else if(showIcon.className === randomClasses[0] && computerShowIcon.className === randomClasses[1]){
-               cScore.innerHTML = computerScore;
-               computerScore++;
-               text.innerHTML = "You Loosed ! ";
-               text2.innerHTML = text.innerHTML;
-           }else if(showIcon.className === randomClasses[1] && computerShowIcon.className === randomClasses[2]){
-               cScore.innerHTML = computerScore;
-               computerScore++;
-               text.innerHTML = "You Loosed ! ";
-               text2.innerHTML = text.innerHTML;
-           }else if(showIcon.className === randomClasses[1] && computerShowIcon.className === randomClasses[0]){
-               pScore.innerHTML = playerScore;
-               playerScore++;
-               text.innerHTML = "It's a Win ! ";
-               text2.innerHTML = text.innerHTML;
-           }else if(showIcon.className === randomClasses[2] && computerShowIcon.className === randomClasses[0]){
-               cScore.innerHTML = computerScore;
-               computerScore++;
-               text.innerHTML = "You Loosed ! ";
-               text2.innerHTML = text.innerHTML;
-           }else if(showIcon.className === randomClasses[2] && computerShowIcon.className === randomClasses[1]){
-               pScore.innerHTML = playerScore;
-               playerScore++;
-               text.innerHTML = "It's a Win ! ";
-               text2.innerHTML = text.innerHTML;
-           }
+const game = () => {
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Random rock paper scissor lizard spock for the computer and the user
+            let clickedBtn = e.target.className;
+            userImage.className = clickedBtn;
+            let randomNum = Math.floor(Math.random() * gameImages.length);
+            compImage.className = gameImages[randomNum];
+            // Game Score.
+            // If it's a Tie .
+            if (userImage.className === compImage.className) {
+                userScore.innerHTML = userScore.innerHTML;
+                compScore.innerHTML = compScore.innerHTML;
+                text.innerHTML = "Tied Game!! ";
+                text2.innerHTML = text.innerHTML;
+            }
+            // if it's win or lose.
+            else if (userImage.className === gameImages[0] && compImage.className === gameImages[2]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+            } else if (userImage.className === gameImages[0] && compImage.className === gameImages[1]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+            } else if (userImage.className === gameImages[1] && compImage.className === gameImages[2]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+            } else if (userImage.className === gameImages[1] && compImage.className === gameImages[0]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+            } else if (userImage.className === gameImages[2] && compImage.className === gameImages[0]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+            } else if (userImage.className === gameImages[2] && compimage.className === gameImages[1]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+            } else if (userImage.className === gameImages[0] && compimage.className === gameImages[3]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[3] && compimage.className === gameImages[4]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[4] && compimage.className === gameImages[2]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[2] && compimage.className === gameImages[3]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[3] && compimage.className === gameImages[1]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[1] && compimage.className === gameImages[4]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[4] && compimage.className === gameImages[0]) {
+                userScore.innerHTML = userWIns;
+                userWIns++;
+                text.innerHTML = "Congratulations! You Won! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[3] && compImage.className === gameImages[0]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[3] && compImage.className === gameImages[2]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[4] && compImage.className === gameImages[1]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[4] && compImage.className === gameImages[3]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[2] && compImage.className === gameImages[4]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[1] && compImage.className === gameImages[3]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+
+            } else if (userImage.className === gameImages[0] && compImage.className === gameImages[4]) {
+                compScore.innerHTML = compWins;
+                compWins++;
+                text.innerHTML = "Sorry, you lose! ";
+                text2.innerHTML = text.innerHTML;
+            }
         });
     });
 }

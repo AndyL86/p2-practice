@@ -32,10 +32,14 @@
     <!--   The first section     -->
     <section class="score-area">
         <div class="moves">Number of moves remaining: 10 </div>
-        <div>Results - <p id="demo">-</p></div>
-        <div class="user col-third">
-                <h3 class="scores">You :<span id="playerScore">0</span></h3>
-                <img class="show" src="assets/images/rock.png" alt="rock hand">
+        <div class="moves">Results - <p id="demo">-</p></div>
+    </section>
+    <section class="image-area">
+        <div class="user-score col-third">
+                <h3 class="scores">You :<span id="userScore">0</span></h3>
+            <span class="image">
+                <i class="fas fa-hand-rock"></i>
+            </span>
         </div>
         <!--   Rules Section         -->
         <div class="rules col-third">
@@ -46,9 +50,11 @@
                 always has, rock crushes scissors.</p>
         </div>
         <!--   The second section     -->
-        <div class="computer col-third">
-                <h3 class="scores">Computer :<span id="computerScore">0</span></h3>
-                <img class="show" src="assets/images/rock.png" alt="rock hand">
+        <div class="comp-score col-third">
+                <h3 class="scores">Computer :<span id="compScore">0</span></h3>
+            <span class="image computer">
+                <i class="fas fa-hand-rock"></i>
+            </span>
         </div>
     </section>
     <script src="assets/js/script.js"></script>

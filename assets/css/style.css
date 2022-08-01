@@ -37,11 +37,26 @@ h2 {
     margin: 0 30px;
 }
 
+.image i {
+    padding-top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+    font-size: 3.2rem;
+    margin: 0 30px;
+}
+
 .btn--big:hover {
     color: forestgreen;
 }
 
 /* Score area */
+.moves {
+    width: 100%;
+    display: block;
+}
 
 .score-area {
     width: 100%;
@@ -49,24 +64,32 @@ h2 {
 }
 
 .col-third {
-    width: 33%;
+    width: 32%;
     display: inline-block;
+}
+
+#demo #demo2 {
+    width: 30%;
 }
 
 /* Selection images */
 
-.user {
+.image-area {
+    width: 100%;
+}
+
+.user-score {
     float: left;
 }
 
-.computer {
+.comp-score {
     float: right;
 }
 
-.scores {
+/* .scores {
     margin-bottom: -2rem;
     margin-top: 1rem;
-}
+} */
 
 .rules p {
     font-size: 1rem;
