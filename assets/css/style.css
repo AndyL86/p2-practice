@@ -72,6 +72,15 @@ h2 {
     width: 30%;
 }
 
+.info span , .info h3{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px 10px;
+    color: white;
+}
+
+
 /* Selection images */
 
 .image-area {
@@ -85,11 +94,6 @@ h2 {
 .comp-score {
     float: right;
 }
-
-/* .scores {
-    margin-bottom: -2rem;
-    margin-top: 1rem;
-} */
 
 .rules p {
     font-size: 1rem;

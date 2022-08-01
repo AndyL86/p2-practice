@@ -22,21 +22,23 @@
         <p id="demo2">Make a Selection:</p>
         <!-- This selection div contains the buttons   -->
         <div class="selection">
-            <button class="fas fa-hand-rock choice btn--big" id="rock"></button>
-            <button class="fas fa-hand-paper choice btn--big" id="paper"></button>
-            <button class="fas fa-hand-scissors choice btn--big" id="scissors"></button>
-            <button class="fas fa-hand-lizard choice btn--big" id="lizard"></button>
-            <button class="fas fa-hand-spock choice btn--big" id="spock"></button>
+            <button class="fas fa-hand-rock btn--big" id="rock"></button>
+            <button class="fas fa-hand-paper btn--big" id="paper"></button>
+            <button class="fas fa-hand-scissors btn--big" id="scissors"></button>
+            <button class="fas fa-hand-lizard btn--big" id="lizard"></button>
+            <button class="fas fa-hand-spock btn--big" id="spock"></button>
         </div>
     </section>
     <!--   The first section     -->
     <section class="score-area">
         <div class="moves">Number of moves remaining: 10 </div>
-        <div class="moves">Results - <p id="demo">-</p></div>
+        <h3 id="results">Results </h3>
     </section>
     <section class="image-area">
         <div class="user-score col-third">
-                <h3 class="scores">You :<span id="userScore">0</span></h3>
+            <div class="info">
+                <h3>Wins :</h3><span id="userCount">0</span>
+            </div>
             <span class="image">
                 <i class="fas fa-hand-rock"></i>
             </span>
@@ -51,9 +53,11 @@
         </div>
         <!--   The second section     -->
         <div class="comp-score col-third">
-                <h3 class="scores">Computer :<span id="compScore">0</span></h3>
+            <div class="info">
+                <h3>Losses :</h3><span id="compCount">0</span>
+            </div>
             <span class="image computer">
-                <i class="fas fa-hand-rock"></i>
+                <i class="fas fa-hand-paper"></i>
             </span>
         </div>
     </section>
